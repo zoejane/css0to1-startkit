@@ -1,8 +1,17 @@
 body{
+	font-family:  'Open Sans', 'helvetica', arial, sans-serif;
+	font-weight: 300;
+	color: #62686f;
+
 	background-image: url(../img/bg5.jpg);
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  font-weight: 300;
 }
 
 .container {
@@ -34,7 +43,13 @@ h1{
 	font-size: 50px;
 	font-family: 'Open Sans', 'helvetica', arial, sans-serif;
 	text-shadow: 0 1px rgba(0,0,0,0.3);
+	color: #fff;
+}
 
+li{
+	display: inline;
+}
 
-
+.main-nav{
+	text-align: center;
 }
