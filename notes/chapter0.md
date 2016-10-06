@@ -1,7 +1,6 @@
 # Chapter0 - 概述
 ## Resources
 - [认识与入门 Markdown](http://sspai.com/25137)
-- [如何发布代码到 GitHub](http://sike.io/css0to1/taking-the-first-step/checkin#)
 ## Design Pattern
 > 前端大牛工作的方法不一样。他们不在个别属性的层面思考。看到一个需求，他们能直接匹配一个适用的 “CSS Design Pattern”。用设计模式，他们能更快的实现一个页面，减少浪费在调试的时间。
 
