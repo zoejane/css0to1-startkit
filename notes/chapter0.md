@@ -9,4 +9,4 @@
 ## What's the differences?
 [响应式个人网站Sample](http://profile-sample.strikingly.com/)
 - Navigation始终在最上方，更为方便
-- 背景图与内容的分离，使得中间内容更有质感
+- 背景图与内容的分离，烘托中间，使得中间内容更有质感
