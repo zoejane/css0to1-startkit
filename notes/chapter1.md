@@ -111,5 +111,19 @@ text-shadow: 0 1px rgba(0,0,0,0.3);
 - ```box-shadow: 0 0px 2px 1px rgba(0,0,0,0.2);``` 给头像加阴影
 - ```border-radius: 999px```把头像变成圆形
 
+### 调整元素间距
+- ```.container {
+  background-color: #D8D8D8;
+  padding: 1px;
+}```
+  - ```padding: 1px;``` 禁止 .container 折叠间距
+  - 在 ```.container``` 上面加上的 ```padding: 1px;``` 有点神奇。假如我们没有加上这个 ```padding: 1px;```，你会发现容器本身的 margin-top 会和第一个子元素的 margin-top 折叠在一起。在容器和 top 这个字符之间的空白其实是 子元素的 margin-top。同样的，父元素的 margin-bottom 会和最后一个子元素的 margin-bottom 也折叠一起了。
+  - 有关 margin 折叠的细节和用法可以看 [Collapsing Margins](http://www.sitepoint.com/web-foundations/collapsing-margins/)
+- ```.container p {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}```
+  - ```margin-top: 50px;``` 和 ```margin-bottom: 50px;``` 设定间距
+
 
 
