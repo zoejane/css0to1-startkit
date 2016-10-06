@@ -188,3 +188,29 @@ header {
 ## 三个技能的布局
 实现这个效果我们只需要把父容器的宽度平均分配给三个同宽的元素即可，也就是说每个元素个占 33.3% 的宽度。
 ### 用 Float 布局来占满父容器的宽度
+```
+<div class="container float-layout">
+  <div class="child child--20">20%</div>
+  <div class="child child--60">60%</div>
+  <div class="child child--20">20%</div>
+</div>
+```
+```
+.float-layout {
+  overflow: hidden;
+}
+
+.float-layout .child {
+  float: left;
+}
+
+.child--20 {
+  width: 20%;
+}
+
+.child--60 {
+  width: 60%;
+}
+```
+- ```width: 20%, width: 60%```指定子元素的宽度。
+- ```float: left``` 让子元素向左飘动。
