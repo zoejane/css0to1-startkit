@@ -34,3 +34,9 @@
     - [中文：来，让我们谈一谈 Normalize.css](http://jerryzou.com/posts/aboutNormalizeCss/)
   - Normalize.css是一种CSS reset的替代方案。经过@necolas和@jon_neal花了几百个小时来努力研究不同浏览器的默认样式的差异，这个项目终于变成了现在这样。
     - 两位大牛花了这么多时间做出来的成果，我们可以非常方便的使用。这就是编程很棒的地方，学会站在巨人的肩膀上，你会觉得走得更顺利和轻松。谢谢这些开放和热爱分享的大牛们。
+  
+ ## Live 页面编辑(可选项)
+ - codepen.io
+ - BrowserSync
+   - 无法运行应该是环境配置的问题 https://github.com/BrowserSync/browser-sync/issues/1007
+ - [F5 Web 编辑器](http://getf5.com/)
