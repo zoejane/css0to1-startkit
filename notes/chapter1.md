@@ -101,10 +101,15 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 ```
 - 调整 字体 属性
+```
 font-weight: 300;
 font-size: 50px;
 font-family: 'Open Sans','helvetica',arial,sans-serif;
 text-shadow: 0 1px rgba(0,0,0,0.3);
+```
+#### 3. 头像修饰
+- ```box-shadow: 0 0px 2px 1px rgba(0,0,0,0.2);``` 给头像加阴影
+- ```border-radius: 999px```把头像变成圆形
 
 
 
