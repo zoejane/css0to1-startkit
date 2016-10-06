@@ -126,5 +126,14 @@ text-shadow: 0 1px rgba(0,0,0,0.3);
   - ```margin-top: 50px;``` 和 ```margin-bottom: 50px;``` 设定间距
 
 ## 怎样排序 CSS 属性
+具体的属性排序可以按照以下的规则：
+
+- 定位属性: position, float, z-index, clear
+- 盒模型相关属性: padding, margin, display, width, height, border
+字体相关
+- CSS2 视觉相关属性 (background)
+- CSS3 属性 (border-radius, box-shadow)
+
+详情请看 [CSS property order - @mdo](http://markdotto.com/2011/11/29/css-property-order/)
 
 
