@@ -47,4 +47,31 @@
  - ```background-size: cover;``` 使背景图始终填满整个屏幕
  - ```background-position: center;``` 使背景图居中
  - 更多关于背景的知识: [Backgrounds In CSS: Everything You Need To Know](https://www.smashingmagazine.com/2009/09/backgrounds-in-css-everything-you-need-to-know/)
+ 
+## 居中外包围框
+- > 我们之后支持响应式布局只需要调整外包围框的宽度即可改变内部所有元素的宽度，非常方便。
+- ``` <div class="container">```
+- ```width: 960px;```设置外包围框的宽度。
+- ```margin: 0 auto;``` 让浏览器自动计算左右 margin，使外包围框居中。
+  - 这个居中技巧只限于有设置宽度的容器。
+
+## 头部容器
+### 在容器中居中
+- [块级元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Block-level_elements)
+  - p, div, h1, h2, table, ol 等等
+  - 浏览器会在块级元素前后增加断行。这些元素的默认宽度会填满父容器。
+- [行元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Inline_elemente)
+  - span, img, a, button, input 等等
+  - 在文字流里面显示，浏览器不会添加断行。默认宽度刚好适应内容。
+  - ```<img src="whales.png" class="centered-image"/>```
+  - 
+  ```.centered-image {
+  display: block;
+  width: 25%;
+  margin: 0 auto;
+}```
+  - This is an image, with display set to 'block' in CSS. Centered by setting left/right margin to auto.
+
+### 向上移出头部容器
+
 
