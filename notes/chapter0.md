@@ -7,6 +7,9 @@
 打好基础框架，然后再去修改，而不是左一下右一下的在个别属性纠结。
 
 ## What's the differences?
-[响应式个人网站Sample](http://profile-sample.strikingly.com/)
-- Navigation始终在最上方，更为方便
-- 背景图与内容的分离，烘托中间，使得中间内容更有质感
+[响应式个人网站Sample](http://profile-sample.strikingly.com/)和我自己之前做的简历网页有什么不同呢？
+- 导航条：Navigation始终在最上方，更为方便
+- 中间内容：背景图与内容的分离，烘托中间，使得中间内容更有质感
+- 图片：配合了合适的图片
+- 字体：字体好看
+- 整体：更有质感，更现代。这个设计思路也可以运用到很多界面上。
