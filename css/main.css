@@ -58,16 +58,16 @@ h1{
 }
 
 .main-nav ul li {
-  margin: 15px 10px;
-  display: inline;
+	display: inline-block;
+	margin: 15px 10px;
 }
 
 .main-nav ul li a {
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  text-decoration: none;
+	color: #fff;
+	font-size: 0.9rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 
 .main-nav ul li a:hover {
