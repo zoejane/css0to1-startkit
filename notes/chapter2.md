@@ -109,3 +109,19 @@ Dive Into HTML5 有[语义 HTML 深入的介绍](http://diveintohtml5.info/seman
   - inline-block 元素可以简单理解为对外表现为行元素，而对内表现为块元素。
   - 上下 padding, margin 有效
   - 容器的 text-align 会对它居中
+
+## 准备 "What I Do" 小节
+
+有两点值得注意：
+
+- What I Do 标题下面没有用 hr 或其他元素来显示下划线
+- 没有用 img 元素来显示这三个技能的图片
+
+和内容无关的装饰性设计元素应该通过 CSS 来实现。
+
+我们把 .info-section 加上白色背景，这样我们才看得清内容：
+
+```.info-section {
+  background-color: #fff;
+}
+```
