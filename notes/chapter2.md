@@ -105,3 +105,7 @@ Dive Into HTML5 有[语义 HTML 深入的介绍](http://diveintohtml5.info/seman
 }
 ```
 - inline 元素只能设置其左右内边距和外边距，而不能设置其高度和上下内外边距。和垂直高度有关的 padding, margin, height 都无效。
+- 这时可以使用 ```display: inline-block```。
+  - inline-block 元素可以简单理解为对外表现为行元素，而对内表现为块元素。
+  - 上下 padding, margin 有效
+  - 容器的 text-align 会对它居中
