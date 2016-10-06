@@ -19,9 +19,7 @@
 
       }
 
-      .float-layout {
-        overflow: hidden;
-      }
+      
 
       .float-layout .child {
         float: left;
@@ -42,10 +40,17 @@
         width: 60%;
         background-color: blue;
       }
+
+      .clearfix:after{
+        content: "";
+        display: block;
+        clear: both;
+        border-bottom: 30px solid black
+      }
     </style>
   </head>
   <body>
-    <div class="container float-layout">
+    <div class="container float-layout clearfix">
       <div class="child child--20">20%</div>
       <div class="child child--60">60%</div>
       <div class="child child--20">20%</div>
