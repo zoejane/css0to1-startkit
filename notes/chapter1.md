@@ -40,3 +40,11 @@
  - BrowserSync
    - 无法运行应该是环境配置的问题 https://github.com/BrowserSync/browser-sync/issues/1007
  - [F5 Web 编辑器](http://getf5.com/)
+ 
+ ## 设置固定背景
+ - > [MDN](https://developer.mozilla.org/en-US/) 和 [Can I Use](http://caniuse.com/) 这两个网站在前端开发中非常重要，在使用 CSS3 属性的时候一定要养成查阅的习惯, 确认你的目标浏览器有支持。
+ - ```background-attachment: fixed;``` 使背景图不随页面的滚动而滚动
+ - ```background-size: cover;``` 使背景图始终填满整个屏幕
+ - ```background-position: center;``` 使背景图居中
+ - 更多关于背景的知识: [Backgrounds In CSS: Everything You Need To Know](https://www.smashingmagazine.com/2009/09/backgrounds-in-css-everything-you-need-to-know/)
+
