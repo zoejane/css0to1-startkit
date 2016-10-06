@@ -136,4 +136,55 @@ text-shadow: 0 1px rgba(0,0,0,0.3);
 
 详情请看 [CSS property order - @mdo](http://markdotto.com/2011/11/29/css-property-order/)
 
+## 为每个技能配图
+通常一个萝卜一个坑，每个元素在文档流会占据一定的空间，一个接着一个。但有时候有些元素不在文档流里面，比如：
 
+- 定位的元素 （fixed 或者 absolute 定位）
+- CSS 背景图
+
+为了完整地显示这些不在文档流的东西，我们可以用 padding 在一个容器里预留空间。
+
+### 给文档流以外的东西留空间
+```
+<header>
+  <h1>Moby Oil</h1>
+</header>
+```
+```
+header {
+  /* logo design by Alex Leroy Deval */
+  /* see: https://dribbble.com/shots/833445-Whale-logo-WIP */
+  background-image: url("whale-logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 40px;
+}
+```
+```padding-left: 40px``` 通常图片的的大小是固定的。左边预留的空间写死就可以了。
+
+### 练习：为每个技能配图
+我们可以用 background 来配图，并居中图片：
+
+```
+.whatido__skill--code {
+  background-image: url(../img/skill-code.png);
+}
+
+.whatido__skill--design {
+  background-image: url(../img/skill-design.png);
+}
+
+.whatido__skill--product {
+  background-image: url(../img/skill-product.png);
+}
+```
+- 禁止背景图重复
+```background-repeat: no-repeat;```
+- 居中背景图
+```background-position: center top;```
+- 元素内部要有足够的空间完整地显示背景图
+
+
+## 三个技能的布局
+实现这个效果我们只需要把父容器的宽度平均分配给三个同宽的元素即可，也就是说每个元素个占 33.3% 的宽度。
+### 用 Float 布局来占满父容器的宽度
