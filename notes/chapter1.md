@@ -60,17 +60,34 @@
 - [块级元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Block-level_elements)
   - p, div, h1, h2, table, ol 等等
   - 浏览器会在块级元素前后增加断行。这些元素的默认宽度会填满父容器。
-- [行元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Inline_elemente)
-  - span, img, a, button, input 等等
-  - 在文字流里面显示，浏览器不会添加断行。默认宽度刚好适应内容。
   - ```<img src="whales.png" class="centered-image"/>```
   - 
-  ```.centered-image {
+  ```
+  .centered-image {
   display: block;
   width: 25%;
   margin: 0 auto;
 }```
+    - ```display: block;``` 把行元素变成块元素
+    - ```margin: 0 auto;``` 居中块元素
+      - 元素一定要有 width 属性
   - This is an image, with display set to 'block' in CSS. Centered by setting left/right margin to auto.
+  - 如果你想要居中一个行元素（比如图片），但不影响同个容器里面的其他元素，那你可以选择把它设定为块元素来居中。
+- [行元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Inline_elemente)
+  - span, img, a, button, input 等等
+  - 在文字流里面显示，浏览器不会添加断行。默认宽度刚好适应内容。
+  - ```
+  <div class="centered-container">
+  <!-- All inline elements are centered in this container. -->
+  <h1>Moby Dick</h1>
+  <img src="whales.png"/>
+</div>
+```
+  - ```.centered-container {
+  text-align: center;
+}```
+    - ```text-align: center;``` 通过容器来居中行元素
+  - 使用 text-align 居中必须经过一个元素的父元素来居中，这会影响在这个容器里所有的元素。 在前面这个例子你可以看到不只是图片居中了, h1 和 p 里面的文字也被居中了。
 
 ### 向上移出头部容器
 
