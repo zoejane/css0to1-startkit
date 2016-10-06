@@ -214,3 +214,4 @@ header {
 ```
 - ```width: 20%, width: 60%```指定子元素的宽度。
 - ```float: left``` 让子元素向左飘动。
+  - 这个技巧使用了 float。float 的排版和不同行元素和块元素的排版是完全不一样的机制。关于 float 的科普知识你可以看 [All About Floats](https://css-tricks.com/all-about-floats/) 这篇文。请忽略关于 IE6 的坑。
