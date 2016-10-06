@@ -79,3 +79,29 @@ Dive Into HTML5 有[语义 HTML 深入的介绍](http://diveintohtml5.info/seman
   display: inline;
 }```
   - li 默认是块元素。需要元素在同行显示的话记得把它们变成行元素: ```display: inline```
+
+### 实现主导航
+我们把比较繁琐的的设计风格写好了，布局就看你的啦！
+
+```
+.main-nav {
+  background-color: #333;
+}
+
+.main-nav ul li {
+  margin: 15px 10px;
+}
+
+.main-nav ul li a {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.main-nav ul li a:hover {
+  text-decoration: underline;
+}
+```
+- inline 元素只能设置其左右内边距和外边距，而不能设置其高度和上下内外边距。和垂直高度有关的 padding, margin, height 都无效。
