@@ -18,3 +18,9 @@ body{
 	width: 130px;
 	margin: 0 auto;
 }
+h1{
+	font-weight: 300;
+	font-size: 50px;
+	font-family: 'Open Sans', 'helvetica', arial, sans-serif;
+	text-shadow: 0 1px rgba(0,0,0,0.3);
+}
