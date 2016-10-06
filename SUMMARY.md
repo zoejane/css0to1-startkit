@@ -1,4 +1,4 @@
 # Summary
 
-* Chapter0
+* [Chapter0](notes/chapter0.md)
 
