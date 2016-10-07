@@ -148,3 +148,7 @@ ul {
 .education-experience__list li img{
 	margin:20px 50px;
 }
+
+.education-experience__list__description{
+	overflow: hidden;
+}
