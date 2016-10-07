@@ -211,13 +211,12 @@ html {
 }
 
 input, textarea,button{
-	width: 40%;
-}
-
-.contact-area {
 	padding: 8px;
+	margin:8px;
+	width: 100%;
 }
 
-.contact{
-	text-align: center;
+form{
+	width: 40%;
+	margin:0 auto;
 }
