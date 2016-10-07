@@ -140,3 +140,8 @@ ul {
 .education-experience__list li img{
 	width: 180px;
 }
+
+.float-left{
+	float:left;
+}
+
