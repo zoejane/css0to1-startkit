@@ -215,3 +215,132 @@ header {
 - ```width: 20%, width: 60%```指定子元素的宽度。
 - ```float: left``` 让子元素向左飘动。
   - 这个技巧使用了 float。float 的排版和不同行元素和块元素的排版是完全不一样的机制。关于 float 的科普知识你可以看 [All About Floats](https://css-tricks.com/all-about-floats/) 这篇文。请忽略关于 IE6 的坑。
+- 父容器的```overflow: hidden``` 强制容器有足够的高度包围飘动元素。
+  - 默认的 overflow: visible 等于是说 “我允许容器里面的内容凸出这个容器”，所以在这个使用场景飘动的图片凸出了容器，并不包含在容器的高度里面。
+  - 而 overflow: hidden 是说 “我不允许容器里面的内容凸出这个容器”。
+  - 为什么默认高度算法么奇怪，不把飘动元素计算进去？这是因为 float 的设计是为了方便图文排版，之后才拿来做 UI 布局。
+
+### 布局三个技能块
+- 用 float 来布局技能块
+- 给 .info-section 加上 padding。
+```
+.info-section {
+  padding: 30px 60px;
+}
+```
+- 居中标题
+- 加上字体风格   
+
+```
+.info-section header h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.info-section__description {
+  font-style: italic;
+}
+```
+- 调整标题和内容的边距为 60px   
+这个边距可以放在三个地方都可以达到相同的效果： 
+  - whatido__skill-list 的 margin-top
+  - .info-section header 的 margin-bottom
+  - .info-section header h2 的 margin-bottom  
+  貌似随便选一个都没差。这时候你应该观察在页面其他地方是什么样子，再决定 CSS 怎么写才能重复利用• 
+  
+## 再说 float 布局 - clearfix
+这个问题有另外一个常见的解决方案 clearfix。
+
+### 用 clear 撑高容器
+```
+<div class="container float-layout clearfix">
+  <div class="child child--20">20%</div>
+  <div class="child child--60">60%</div>
+  <div class="child child--20">20%</div>
+</div>
+```
+
+```
+.clearfix:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+```
+
+- ```content:""``` 在 clearfix 这个元素内部最后加上一个空的伪元素，该元素与 .child 类并列
+- ```clear:both``` 使伪元素清除飘动元素
+- notice:这里 display:table 是为了处理 margin collapse ，参考这篇[文章](http://nicolasgallagher.com/micro-clearfix-hack/)，至于后面的标题装饰也会使用到这个技巧，不过那里就不要用 display:table 了，应该使用 display:block
+- 我们之前说过，容器的高度之所以会是 0 是因为飘动元素不包括在容器高度的计算里面。想要撑高容器的话，我们可以在飘动元素后面加上一个普通元素：
+  - clearfix 利用 :after 伪元素创建了一个看不到的元素。
+
+clearfix 和之前介绍的 overflow: hidden 效果一模一样，但背后的原理其实不一样。你在实现的时候可以按情况选一个方便的来使用。
+
+关于 clearfix 的科普请看：[The very latest new new way to do "clearfix"](http://www.cssmojo.com/latest_new_clearfix_so_far/)
+
+### 关于clearflex的一些讨论
+[What is a clearfix? @StackOverflow](http://stackoverflow.com/questions/8554043/what-is-a-clearfix)  
+StackOverflow上，有很多人的回答，对我来说可以从这里开始了解不同人眼中的clearfix
+
+It's worth noting that today, the use of floated elements for layout is getting more and more discouraged with the use of better alternatives.
+
+- display: inline-block - Better
+- Flexbox - Best (but limited browser support)
+
+A clearfix is a way for an element to automatically clear its child elements, so that you don't need to add additional markup. It's generally used in float layouts where elements are floated to be stacked horizontally.
+
+A clearfix is performed as follows:
+
+```
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+```
+Or, if you don't require IE<8 support, the following is fine too:
+
+```
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+```
+
+Normally you would need to do something as follows:
+
+```
+<div>
+    <div style="float: left;">Sidebar</div>
+    <div style="clear: both;"></div> <!-- Clear the float -->
+</div>
+```
+
+With clearfix, you only need to
+
+```
+<div class="clearfix">
+    <div style="float: left;" class="clearfix">Sidebar</div>
+    <!-- No Clearing div! -->
+</div>
+```
+
+[Understanding the Humble Clearfix](http://fuseinteractive.ca/blog/understanding-humble-clearfix#.V_b6OpN95E4)
+
+这里有一些很棒的图示，帮助了解clearfix到底做了什么
+
+## 为何不用 Inline Block 做布局
+
+因为行元素 （inline 和 inline-block） 是为了显示文字用的。 如果在书写 HTML 文件时行元素之间有空白符，这些空白会显现出来。
+  - 如果你的布局对空白不敏感 （比如我们之前实现的导航），那么你可以选用 inline-block
+  - 对空白敏感的布局 （分栏，grid）请用 float
+
+## 标题
+装饰
+标题下面的下划线装饰属于样式范畴，而非文本语义的范畴。与其在 HTML 加个没有意义的 hr 元素，请用 :after 伪元素创建这个下划线。
+
+用 ```border-bottom: 3px solid black``` 来划线
