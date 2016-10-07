@@ -64,3 +64,28 @@
 - 用 float 布局
 - 为文字内容加上一个包围容器，创建新的 bfc  
 在 HTML 里面去加上更多的文字内容，确认这些文字不会围绕飘动元素。
+
+## 实现 Photos
+### 全局使用 border-box 简化布局
+对布局来说 content-box 只有弊没有利。border-box 的特性是 padding 和 border 算在你指定的宽度里面，所以宽度你说多少就是多少。
+```
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+```
+[Can I Use - box-sizing](http://caniuse.com/#search=box-sizing)
+
+- ```box-sizing: border-box``` 设定 html 为 border-box
+- ```box-sizing: inherit``` 其他元素基础父元素的 box-sizing 属性
+- 这样的结果是所有元素都通过继承获得 border-box 的属性。
+
+### 练习 - 实现 Photos
+
+- 用 border-box
+- 图片之间的间距用 padding: 10px
+- img 宽度设定为 100% (即其父容器的宽度)
+
