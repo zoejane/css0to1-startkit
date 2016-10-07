@@ -11,3 +11,33 @@ use ```display:inline-block;``` instead of float
 you can't centre floats, but inline-blocks centre as if they were text
 - so on the outer overall container of your "row" - you would set ```text-align: center;``` 
 - then for each image/caption container (it's those which would be ```inline-block;```) you can re-align the text to left if you require
+
+## 实现 Leave A Message
+- 输入栏和 submit 按钮居中
+- Name, Email, Message 这些标签在表单容器外面，向右靠齐
+
+和之前一样，我们把没啥技术含量的修饰性风格准备好了:
+```
+.contact input,
+.contact textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact button {
+  border: none;
+  border-radius: 9999px;
+
+  background: #ffd524;
+
+  cursor: pointer;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  color: #fff;
+  box-shadow: 0 3px 0 #daae1d;
+}
+```
+
+请布局表单：
+
+- 表单的宽度为容器的 40%
+- 输入栏的 padding 为 8px
