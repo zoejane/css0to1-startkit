@@ -118,6 +118,7 @@ ul {
 
 .info-section__description {
   font-style: italic;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -151,4 +152,14 @@ ul {
 
 .education-experience__list__description{
 	overflow: hidden;
+}
+
+h3{
+	text-align: left;
+	margin:0;
+	font-size: 23px;
+}
+.education-experience__title{
+	font-weight: bold;
+	margin: 0;
 }
