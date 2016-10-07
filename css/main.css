@@ -145,3 +145,6 @@ ul {
 	float:left;
 }
 
+.education-experience__list li img{
+	margin:20px 50px;
+}
