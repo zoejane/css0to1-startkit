@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)http://sike.io/css0to1/content-part3/demo/absolute-positioning.html -->
+<html class="gr__sike_io"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      .container {
+        width: 640px;
+        margin: 0 auto;
+        margin-top: 50px;
+        border: 1px solid black;
+      }
+
+      .box {
+        position: relative;
+        width: 150px;
+        height: 1em;
+        margin: 100px auto;
+
+        background-color: #ddd;
+        text-align: center;
+      }
+
+      .align-bottom {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+
+        background: red;
+      }
+
+      .align-left {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+
+        background: red;
+      }
+
+      .align-right {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 100%;
+
+        background: red;
+      }
+
+      .align-top {
+        position: absolute;
+        /*top: 0;*/
+        bottom: 100%;
+
+        background: red;
+      }
+
+    </style>
+  <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+
+  <body data-gr-c-s-loaded="true">
+    <div class="container">
+
+      <div class="box">
+        align top
+        <div class="align-top">
+          I am absolutely positioned
+        </div>
+      </div>
+
+      <div class="box">
+        align left
+        <div class="align-left">
+          I am absolutely positioned
+        </div>
+      </div>
+
+      <div class="box">
+        align right
+        <div class="align-right">
+          I am absolutely positioned
+        </div>
+      </div>
+
+      <div class="box">
+        align bottom
+        <div class="align-bottom">
+          I am absolutely positioned
+        </div>
+      </div>
+
+    </div>
+  
+</body></html>
