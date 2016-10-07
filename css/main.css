@@ -183,3 +183,41 @@ html {
 }
 
 
+.child-20{
+	width: 20%;
+	display: inline-block;
+}
+
+.get-in-touch__list{
+	text-align: center;
+}
+
+.contact input,
+.contact textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact button {
+  border: none;
+  border-radius: 9999px;
+
+  background: #ffd524;
+
+  cursor: pointer;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  color: #fff;
+  box-shadow: 0 3px 0 #daae1d;
+}
+
+input, textarea,button{
+	width: 40%;
+}
+
+.contact-area {
+	padding: 8px;
+}
+
+.contact{
+	text-align: center;
+}

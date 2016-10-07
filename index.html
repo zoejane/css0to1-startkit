@@ -99,7 +99,7 @@ See: http://www.sitepoint.com/web-foundations/doctypes/
         </ul>
       </section>
 
-      <section class="info-section photos">
+      <section class="info-section photos clearfix">
         <header>
           <h2 class="h2-clearfix">Photos</h2>
           <p class="info-section__description">Some pics from my travels!</p>
@@ -132,41 +132,47 @@ See: http://www.sitepoint.com/web-foundations/doctypes/
         </ul>
       </section>
 
-      <section class="info-section get-in-touch">
+      <section class="info-section get-in-touch clearfix">
         <header>
           <h2 class="h2-clearfix">Get in Touch</h2>
         </header>
         <ul class="get-in-touch__list">
-          <li>
+          <li class="child-20">
             <a href="#"><img src="img/fb-icon.png" alt=""></a>
             <p>Facebook</p>
           </li>
-          <li>
+          <li class="child-20">
             <img src="img/twitter-icon.png" alt="">
             <p>Twitter</p>
           </li>
-          <li>
+          <li class="child-20">
             <img src="img/linkedin-icon.png" alt="">
             <p>LinkedIn</p>
           </li>
-          <li>
+          <li class="child-20">
             <img src="img/email-icon.png" alt="">
             <p>Email</p>
           </li>
         </ul>
       </section>
 
-      <section class="info-section contact">
+      <section class="info-section contact clearfix">
         <header>
-          <h2>Or...Leave a Message</h2>
+          <h2 class="h2-clearfix">Or...Leave a Message</h2>
         </header>
         <form action="">
+          <div class="contact-area clearfix">
           <label for="name">Name</label>
           <input name="name" id="name" type="text">
+          </div>
+          <div class="contact-area clearfix">
           <label for="email">Email</label>
           <input name="email" id="email" type="email">
+          </div>
+          <div class="contact-area clearfix">
           <label for="message">Message</label>
           <textarea name="message" id="message"></textarea>
+        </div>
           <button type="submit">Submit</button>
         </form>
       </section>
