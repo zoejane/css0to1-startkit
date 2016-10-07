@@ -328,6 +328,7 @@ With clearfix, you only need to
     <!-- No Clearing div! -->
 </div>
 ```
+![](http://i.stack.imgur.com/gYRqS.jpg)
 
 [Understanding the Humble Clearfix](http://fuseinteractive.ca/blog/understanding-humble-clearfix#.V_b6OpN95E4)
 
