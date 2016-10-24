@@ -1,0 +1,441 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Chapter2 - 实现导航和页面内容 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chapter3.html" />
+    
+    
+    <link rel="prev" href="chapter1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter0.html">
+            
+                <a href="chapter0.html">
+            
+                    
+                    Chapter0 - 概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    Chapter1 - 踏出第一步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="chapter2.html">
+            
+                <a href="chapter2.html">
+            
+                    
+                    Chapter2 - 实现导航和页面内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter3.html">
+            
+                <a href="../chapter3.html">
+            
+                    
+                    Chapter3 - 实现页面内容 - Part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter4.html">
+            
+                <a href="../chapter4.html">
+            
+                    
+                    Chapter4 - 实现页面内容 - Part 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../letter1.html">
+            
+                <a href="../letter1.html">
+            
+                    
+                    Letter1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter5.html">
+            
+                <a href="../chapter5.html">
+            
+                    
+                    Chapter 5 - 响应页面的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Chapter2 - 实现导航和页面内容</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="chapter2---&#x5B9E;&#x73B0;&#x5BFC;&#x822A;&#x548C;&#x9875;&#x9762;&#x5185;&#x5BB9;">Chapter2 - &#x5B9E;&#x73B0;&#x5BFC;&#x822A;&#x548C;&#x9875;&#x9762;&#x5185;&#x5BB9;</h1>
+<h2 id="&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x5B57;&#x4F53;&#x98CE;&#x683C;">&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x5B57;&#x4F53;&#x98CE;&#x683C;</h2>
+<pre><code>body {
+  font-family: &apos;Open Sans&apos;,&apos;helvetica&apos;,arial,sans-serif;
+  font-weight: 300;
+  color: #62686f;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  font-weight: 300;
+}
+</code></pre><h2 id="&#x5BFC;&#x822A;&#x5E03;&#x5C40;&#x7684;&#x5B9E;&#x73B0;&#x601D;&#x8DEF;">&#x5BFC;&#x822A;&#x5E03;&#x5C40;&#x7684;&#x5B9E;&#x73B0;&#x601D;&#x8DEF;</h2>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x8981;&#x505A;&#x51FA;&#x8FD9;&#x4E2A;&#x6548;&#x679C;&#xFF1A;</p>
+<ul>
+<li>4 &#x4E2A;&#x94FE;&#x63A5;&#x5728;&#x540C;&#x4E00;&#x884C;&#x663E;&#x793A;&#xFF1B;</li>
+<li>4 &#x4E2A;&#x94FE;&#x63A5;&#x7684;&#x5185;&#x5BB9;&#x5C45;&#x4E2D;&#x663E;&#x793A;&#x3002;</li>
+</ul>
+<p>&#x633A;&#x7B80;&#x5355;&#x7684;&#x3002;&#x5957;&#x7528;&#x7B2C;&#x4E00;&#x8282;&#x8BFE;&#x4ECB;&#x7ECD;&#x7684;&#x5C45;&#x4E2D;&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x505A;&#xFF1A;</p>
+<ul>
+<li>&#x628A;&#x6BCF;&#x4E2A;&#x94FE;&#x63A5;&#x53D8;&#x6210; inline &#x5143;&#x7D20;</li>
+<li>&#x628A;&#x5BB9;&#x5668;&#x8BBE;&#x5B9A;&#x4E3A; text-align: center</li>
+</ul>
+<h2 id="html-&#x8BED;&#x4E49;">HTML &#x8BED;&#x4E49;</h2>
+<h2 id="&#x6839;&#x636E;&#x804C;&#x80FD;&#x9009;&#x62E9;&#x5143;&#x7D20;">&#x6839;&#x636E;&#x804C;&#x80FD;&#x9009;&#x62E9;&#x5143;&#x7D20;</h2>
+<p>&#x5728;&#x7F16;&#x5199; HTML &#x7684;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5148;&#x4E86;&#x89E3;&#x6A21;&#x5757;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x7684;&#x804C;&#x80FD;&#xFF08;&#x5373;&#x8BED;&#x4E49;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x4F9D;&#x636E;&#x5404;&#x4E2A;&#x6A21;&#x5757;&#x7684;&#x804C;&#x80FD;&#x6765;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x5143;&#x7D20;&#xFF1A;</p>
+<ul>
+<li>&#x5BFC;&#x822A;&#x6A21;&#x5757;&#x5E94;&#x8BE5;&#x4F7F;&#x7528; nav</li>
+<li>&#x6587;&#x7AE0;&#x6A21;&#x5757;&#x5C31;&#x5E94;&#x8BE5;&#x4F7F;&#x7528; article</li>
+<li>&#x5934;&#x90E8;&#x6A21;&#x5757;&#x5E94;&#x8BE5;&#x4F7F;&#x7528; header</li>
+<li>&#x65E0;&#x7F16;&#x53F7;&#x5217;&#x8868;&#x6A21;&#x5757;&#x5E94;&#x8BE5;&#x4F7F;&#x7528; ul</li>
+</ul>
+<h2 id="&#x4E3E;&#x4F8B;">&#x4E3E;&#x4F8B;</h2>
+<p>&#x5728;&#x7F16;&#x5199;&#x4E3B;&#x5BFC;&#x822A;&#x7684;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x8FD9;&#x4E48;&#x5206;&#x6790;&#xFF1A;</p>
+<ul>
+<li>&#x4E3B;&#x5BFC;&#x822A;&#x8FD9;&#x4E2A;&#x5BB9;&#x5668;&#x5E94;&#x8BE5;&#x7528; nav</li>
+<li>&#x5BB9;&#x5668;&#x91CC;&#x9762;&#x6709;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x7528; ul</li>
+<li>&#x6BCF;&#x4E2A;&#x94FE;&#x63A5;&#x653E;&#x5728;&#x4E2A;&#x522B;&#x7684;&#x6761;&#x76EE; li &#x91CC;&#x9762;</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x867D;&#x7136;&#x8BBE;&#x8BA1;&#x91CC;&#x94FE;&#x63A5;&#x7684;&#x6587;&#x5B57;&#x90FD;&#x662F;&#x5168;&#x5927;&#x5199;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x7F16;&#x5199;&#x7684; HTML &#x5B83;&#x4EEC;&#x5E94;&#x8BE5;&#x662F;&#x7528;&#x5E38;&#x89C4;&#x7684;&#x5199;&#x6CD5;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A; &#x201C;&#x5168;&#x5927;&#x5199;&#x201D; &#x662F;&#x6837;&#x5F0F;&#x8303;&#x7574;&#xFF0C;&#x800C;&#x975E;&#x6587;&#x672C;&#x8BED;&#x4E49;&#x7684;&#x8303;&#x7574;&#x3002;</p>
+<h2 id="&#x5206;&#x6790;&#x5229;&#x5F0A;">&#x5206;&#x6790;&#x5229;&#x5F0A;</h2>
+<p>&#x6211;&#x4EEC;&#x9700;&#x8981;:</p>
+<ul>
+<li>&#x6D88;&#x9664;&#x5217;&#x8868;&#x672C;&#x8EAB;&#x7684;&#x9ED8;&#x8BA4;&#x95F4;&#x9694;</li>
+<li>&#x6D88;&#x9664;&#x5217;&#x8868;&#x6761;&#x76EE;&#x7684;&#x9ED8;&#x8BA4;&#x98CE;&#x683C;</li>
+<li>&#x628A;&#x5217;&#x8868;&#x6761;&#x76EE;&#x7F16;&#x7A0B;&#x884C;&#x5143;&#x7D20;</li>
+</ul>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8FD9;&#x4E48;&#x86CB;&#x75BC;&#xFF1F;&#x9075;&#x7167; HTML &#x8BED;&#x4E49;&#x6709;&#x4EC0;&#x4E48;&#x597D;&#x5904;&#x5462;&#xFF1F;</p>
+<ul>
+<li>&#x5206;&#x79BB;&#x5185;&#x5BB9;&#x548C;&#x9875;&#x9762;&#x7684;&#x8868;&#x73B0;&#x65B9;&#x6CD5;&#x3002;<br>&#x5047;&#x5982;&#x6211;&#x4EEC;&#x8981;&#x628A;&#x5BFC;&#x822A;&#x6539;&#x6210;&#x5782;&#x76F4;&#x7684;&#x83DC;&#x5355;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x53BB;&#x4FEE;&#x6539; HTML &#x628A; span &#x53D8;&#x6210; div</li>
+<li>&#x770B;&#x5230;&#x4E00;&#x4E2A; nav &#x5C31;&#x77E5;&#x9053;&#x662F;&#x5BFC;&#x822A;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x53BB;&#x770B;&#x5B83;&#x7684;&#x98CE;&#x683C;&#x3002;&#x65B9;&#x4FBF;&#x548C;&#x522B;&#x7684;&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x5E08;&#x534F;&#x4F5C;&#x3002;</li>
+</ul>
+<p>&#x603B;&#x7ED3;&#x6211;&#x4EEC;&#x4E0A;&#x9762;&#x8BF4;&#x8BF4;&#x7684;&#xFF0C;&#x5728;&#x5B9E;&#x73B0;&#x9875;&#x9762;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x7684;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5206;&#x6210;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ul>
+<li>&#x4E86;&#x89E3;&#x6A21;&#x5757;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x7684;&#x804C;&#x80FD;&#xFF08;&#x8BED;&#x4E49;&#xFF09;&#xFF1B;</li>
+<li>&#x7F16;&#x5199; HTML &#x4EE3;&#x7801;&#xFF1B;</li>
+<li>&#x89C2;&#x5BDF;&#x6A21;&#x5757;&#x7684;&#x5E03;&#x5C40;&#x7279;&#x70B9;&#xFF1B;</li>
+<li>&#x7F16;&#x5199; CSS &#x4EE3;&#x7801;&#x3002;</li>
+</ul>
+<h3 id="html5-&#x8BED;&#x4E49;&#x6807;&#x7B7E;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x652F;&#x6301;">HTML5 &#x8BED;&#x4E49;&#x6807;&#x7B7E;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x652F;&#x6301;</h3>
+<p><a href="http://caniuse.com/#search=semantic" target="_blank">Can I Use: Semantic Elements</a><br>IE8 &#x867D;&#x7136;&#x4E0D;&#x652F;&#x6301;&#xFF0C;&#x4F46;&#x6211;&#x4EEC;&#x5F15;&#x7528;&#x7684; normalize.css <a href="https://github.com/necolas/normalize.css/blob/2bdda84272650aedfb45d8abe11a6d177933a803/normalize.css#L33-L60" target="_blank">&#x89E3;&#x51B3;&#x4E86;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;</a>&#x3002;<br>Dive Into HTML5 &#x6709;<a href="http://diveintohtml5.info/semantics.html" target="_blank">&#x8BED;&#x4E49; HTML &#x6DF1;&#x5165;&#x7684;&#x4ECB;&#x7ECD;</a>&#x3002;</p>
+<h2 id="&#x5B9E;&#x73B0;&#x4E3B;&#x5BFC;&#x822A;">&#x5B9E;&#x73B0;&#x4E3B;&#x5BFC;&#x822A;</h2>
+<h3 id="&#x53BB;&#x9664;&#x5217;&#x8868;&#x7684;&#x98CE;&#x683C;">&#x53BB;&#x9664;&#x5217;&#x8868;&#x7684;&#x98CE;&#x683C;</h3>
+<ul>
+<li><code>ul.nostyle {
+list-style: none;
+padding: 0;
+margin: 0;
+}</code><ul>
+<li><code>list-style: none;</code>&#x628A;&#x5217;&#x8868;&#x88C5;&#x9970;&#x53BB;&#x6389;</li>
+<li><code>padding: 0; margin: 0;</code> &#x628A;&#x6D4F;&#x89C8;&#x5668;&#x9ED8;&#x8BA4;&#x7684;&#x95F4;&#x9694;&#x6E05;&#x9664;</li>
+</ul>
+</li>
+<li><code>ul.inline-items li {
+display: inline;
+}</code><ul>
+<li>li &#x9ED8;&#x8BA4;&#x662F;&#x5757;&#x5143;&#x7D20;&#x3002;&#x9700;&#x8981;&#x5143;&#x7D20;&#x5728;&#x540C;&#x884C;&#x663E;&#x793A;&#x7684;&#x8BDD;&#x8BB0;&#x5F97;&#x628A;&#x5B83;&#x4EEC;&#x53D8;&#x6210;&#x884C;&#x5143;&#x7D20;: <code>display: inline</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x5B9E;&#x73B0;&#x4E3B;&#x5BFC;&#x822A;">&#x5B9E;&#x73B0;&#x4E3B;&#x5BFC;&#x822A;</h3>
+<p>&#x6211;&#x4EEC;&#x628A;&#x6BD4;&#x8F83;&#x7E41;&#x7410;&#x7684;&#x7684;&#x8BBE;&#x8BA1;&#x98CE;&#x683C;&#x5199;&#x597D;&#x4E86;&#xFF0C;&#x5E03;&#x5C40;&#x5C31;&#x770B;&#x4F60;&#x7684;&#x5566;&#xFF01;</p>
+<pre><code>.main-nav {
+  background-color: #333;
+}
+
+.main-nav ul li {
+  margin: 15px 10px;
+}
+
+.main-nav ul li a {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.main-nav ul li a:hover {
+  text-decoration: underline;
+}
+</code></pre><ul>
+<li>inline &#x5143;&#x7D20;&#x53EA;&#x80FD;&#x8BBE;&#x7F6E;&#x5176;&#x5DE6;&#x53F3;&#x5185;&#x8FB9;&#x8DDD;&#x548C;&#x5916;&#x8FB9;&#x8DDD;&#xFF0C;&#x800C;&#x4E0D;&#x80FD;&#x8BBE;&#x7F6E;&#x5176;&#x9AD8;&#x5EA6;&#x548C;&#x4E0A;&#x4E0B;&#x5185;&#x5916;&#x8FB9;&#x8DDD;&#x3002;&#x548C;&#x5782;&#x76F4;&#x9AD8;&#x5EA6;&#x6709;&#x5173;&#x7684; padding, margin, height &#x90FD;&#x65E0;&#x6548;&#x3002;</li>
+<li>&#x8FD9;&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>display: inline-block</code>&#x3002;<ul>
+<li>inline-block &#x5143;&#x7D20;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7406;&#x89E3;&#x4E3A;&#x5BF9;&#x5916;&#x8868;&#x73B0;&#x4E3A;&#x884C;&#x5143;&#x7D20;&#xFF0C;&#x800C;&#x5BF9;&#x5185;&#x8868;&#x73B0;&#x4E3A;&#x5757;&#x5143;&#x7D20;&#x3002;</li>
+<li>&#x4E0A;&#x4E0B; padding, margin &#x6709;&#x6548;</li>
+<li>&#x5BB9;&#x5668;&#x7684; text-align &#x4F1A;&#x5BF9;&#x5B83;&#x5C45;&#x4E2D;</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x51C6;&#x5907;-what-i-do-&#x5C0F;&#x8282;">&#x51C6;&#x5907; &quot;What I Do&quot; &#x5C0F;&#x8282;</h2>
+<p>&#x6709;&#x4E24;&#x70B9;&#x503C;&#x5F97;&#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>What I Do &#x6807;&#x9898;&#x4E0B;&#x9762;&#x6CA1;&#x6709;&#x7528; hr &#x6216;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x6765;&#x663E;&#x793A;&#x4E0B;&#x5212;&#x7EBF;</li>
+<li>&#x6CA1;&#x6709;&#x7528; img &#x5143;&#x7D20;&#x6765;&#x663E;&#x793A;&#x8FD9;&#x4E09;&#x4E2A;&#x6280;&#x80FD;&#x7684;&#x56FE;&#x7247;</li>
+</ul>
+<p>&#x548C;&#x5185;&#x5BB9;&#x65E0;&#x5173;&#x7684;&#x88C5;&#x9970;&#x6027;&#x8BBE;&#x8BA1;&#x5143;&#x7D20;&#x5E94;&#x8BE5;&#x901A;&#x8FC7; CSS &#x6765;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x628A; .info-section &#x52A0;&#x4E0A;&#x767D;&#x8272;&#x80CC;&#x666F;&#xFF0C;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x624D;&#x770B;&#x5F97;&#x6E05;&#x5185;&#x5BB9;&#xFF1A;</p>
+<p><code>.info-section {
+  background-color: #fff;
+}</code></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="chapter1.html" class="navigation navigation-prev " aria-label="Previous page: Chapter1 - 踏出第一步">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chapter3.html" class="navigation navigation-next " aria-label="Next page: Chapter3 - 实现页面内容 - Part 2">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Chapter2 - 实现导航和页面内容","level":"1.4","depth":1,"next":{"title":"Chapter3 - 实现页面内容 - Part 2","level":"1.5","depth":1,"path":"chapter3.md","ref":"chapter3.md","articles":[]},"previous":{"title":"Chapter1 - 踏出第一步","level":"1.3","depth":1,"path":"notes/chapter1.md","ref":"notes/chapter1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"notes/chapter2.md","mtime":"2016-10-12T15:46:53.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-24T05:52:02.332Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
