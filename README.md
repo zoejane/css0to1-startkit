@@ -1,4 +1,4 @@
-# sike.io CSS 0 to 1 Starter Kit
+# CSS 0 to 1 Starter Kit @sike.io
 
 To do the exercises, just edit the files with your favourite editor.
 
@@ -16,7 +16,7 @@ To run the live-edit web server:
 browser-sync start --server --port 4000 --files index.html --files css/main.css
 ```
 
-It should open the url `http://localhost:4000` immediately. Editing index.html or css/main.css would cause the browser to automatically refresh.
+It should open the url `http://localhost:4000` immediately. Editing index.html or css\/main.css would cause the browser to automatically refresh.
 
 # Publish To Github Pages
 
@@ -26,4 +26,5 @@ You can publish your work on Github so the world can see it. Run this command:
 git push origin master:gh-pages
 ```
 
-For example, our repository is [https://github.com/sikeio/css0to1-startkit](https://github.com/sikeio/css0to1-startkit), the page would be accessible at [http://sikeio.github.io/css0to1-startkit/](http://sikeio.github.io/css0to1-startkit/).
+For example, our repository is [https:\/\/github.com\/sikeio\/css0to1-startkit](https://github.com/sikeio/css0to1-startkit), the page would be accessible at [http:\/\/sikeio.github.io\/css0to1-startkit\/](http://sikeio.github.io/css0to1-startkit/).
+
